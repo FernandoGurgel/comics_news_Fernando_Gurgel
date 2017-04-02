@@ -8224,3 +8224,6 @@ Picker.extend( 'pickadate', DatePicker )
   };
 
 }( jQuery ));
+$( document ).ready(function() {
+                $(".button-collapse").sideNav();
+            });
