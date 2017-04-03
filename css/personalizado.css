@@ -5,7 +5,7 @@
 .maxText{
     display:block;
     text-overflow: ellipsis;
-    width: 220px;
+    width: 95%;
     overflow: hidden; 
     white-space: nowrap;
 }

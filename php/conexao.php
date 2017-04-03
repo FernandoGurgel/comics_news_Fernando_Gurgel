@@ -38,7 +38,7 @@ class Conexao {
     }
     
     public function selectNoticia(){
-        $this->query = "SELECT * FROM noticia ORDER by data DESC";
+        $this->query = "SELECT * FROM noticia order by data desc limit 20";
         
         $result = $this->conecao->query($this->query);
         $lista = array();
@@ -54,6 +54,23 @@ class Conexao {
             array_push($lista,$this->noticia);
         }
         return $lista;
+    }
+    
+    public function selectID(Noticia $noticia){
+        
+        $this->query = "SELECT * FROM noticia where ID = ".$noticia->get('codigo')."";
+        
+        $result = $this->conecao->query($this->query);
+        
+        while ($dados = $result->fetchObject()) {
+            $this->noticia = new Noticia($dados->ID,
+                                  $dados->titulo,
+                                  $dados->descricao,
+                                  $dados->img,
+                                  $dados->data,
+                                  $dados->autor);
+        }
+        return $this->noticia;
     }
 }
 

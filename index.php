@@ -32,7 +32,7 @@
                 $list = $conexao->selectNoticia();
                 
                 $mensagem = '<div class="row section">
-                <div class="col s8 offset-s2">
+                <div class="col s10 offset-s1">
                 ';
                 foreach($list as $get){
                     $mensagem.='<div class="col s4">
@@ -41,11 +41,11 @@
                           <img class="activator" width="200" height="250" src="img/'.$get->get("img").'">
                         </div>
                         <div class="card-content">
-                          <span class="card-title activator grey-text text-darken-4 maxText">
+                          <span class="card-title activator grey-text text-darken-2 maxText">
                           '.$get->get("titulo").'
                           </span>
                             <p><a href="
-                              visualizar.php/?id='.$get->get("codigo").'">
+                              visualizar.php?id='.$get->get("codigo").'">
                                 Ir para ntícia
                             </a></p>
                         </div>
