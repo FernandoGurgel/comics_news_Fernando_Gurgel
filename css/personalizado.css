@@ -1,3 +1,11 @@
 .fg-form {
     margin-top: 20%;
 }
+
+.maxText{
+    display:block;
+    text-overflow: ellipsis;
+    width: 220px;
+    overflow: hidden; 
+    white-space: nowrap;
+}

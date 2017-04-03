@@ -3,7 +3,7 @@ require_once ("noticias.php");
 
 class Conexao {
     
-    private Noticia $noticia;
+    private $noticia;
     private $conecao;
     private $query;
     
@@ -40,7 +40,7 @@ class Conexao {
     public function selectNoticia(){
         $this->query = "SELECT * FROM noticia ORDER by data DESC";
         
-        $result = $this->chamaBD->query($this->query);
+        $result = $this->conecao->query($this->query);
         $lista = array();
         
         while ($dados = $result->fetchObject()) {

@@ -68,7 +68,7 @@
         if($arqError == 0){
             $pasta = 'img/';
             $upload = move_uploaded_file($arqTemp, $pasta . $arqName);
-            $noticia = new Noticia($titulo,$descricao,$img,$autor);
+            $noticia = new Noticia(null,$titulo,$descricao,$img,null,$autor);
             $conexao = new Conexao();
             $conexao->inserirNoticias($noticia);
         }

@@ -9,22 +9,14 @@ class Noticia{
     private $data;
     private $autor;
     
-    function __construct1($codigo,$titulo,$descricao,$img,$data,$autor){
-       $this->data = $data;
-       $this->codigo = $codigo;
-       $this->titulo = $titulo;
-       $this->descricao = $descricao;
-       $this->img = $img;
-       $this->autor = $autor;
+    function __construct($a1,$a2,$a3,$a4,$a5,$a6){
+       $this->data = $a5;
+       $this->codigo = $a1;
+       $this->titulo = $a2;
+       $this->descricao = $a3;
+       $this->img = $a4;
+       $this->autor = $a6;
     }
-    
-    function __construct($titulo,$descricao,$img,$autor){
-        $this->titulo = $titulo;
-        $this->descricao = $descricao;
-        $this->img = $img;
-        $this->autor = $autor;
-        
-    } 
     
     public function get ($variavel){
         return $this->$variavel;
