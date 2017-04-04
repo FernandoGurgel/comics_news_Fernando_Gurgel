@@ -50,8 +50,12 @@
                             </a></p>
                         </div>
                         <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4">Mais detalhes...<i class="material-icons right">close</i></span>
+                          <span class="card-title grey-text text-darken-4 maxText">Mais detalhes...<i class="material-icons right">close</i></span>
                           <p>'.$get->get("titulo").'</p>
+                          <p><a href="
+                              visualizar.php?id='.$get->get("codigo").'">
+                                Ir para ntícia
+                            </a></p>
                         </div>
                       </div>
                     </div>';

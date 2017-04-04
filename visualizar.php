@@ -54,7 +54,7 @@
                         <div class="chip">
                             <?php echo $noticia->get('data');?>
                         </div>
-                      <p><?php echo $noticia->get('descricao');?></p>
+                      <p class="flow-text text-darken-4 textInten"><?php echo $noticia->get('descricao');?></p>
                     </div>
                   </div>
                 </div>

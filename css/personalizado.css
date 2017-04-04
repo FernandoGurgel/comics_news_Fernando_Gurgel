@@ -9,3 +9,7 @@
     overflow: hidden; 
     white-space: nowrap;
 }
+
+.textInten{
+    text-align: justify;
+}
