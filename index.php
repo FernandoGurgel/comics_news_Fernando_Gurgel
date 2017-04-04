@@ -35,8 +35,8 @@
                 <div class="col s10 offset-s1">
                 ';
                 foreach($list as $get){
-                    $mensagem.='<div class="col s4">
-                        <div class="card ">
+                    $mensagem.='<div class="col s4" id="text">
+                        <div class="card girando">
                         <div class="card-image waves-effect waves-block waves-light">
                           <img class="activator" width="200" height="250" src="img/'.$get->get("img").'">
                         </div>
@@ -70,6 +70,7 @@
         </div>
         <script>
             exibiMensagem("Seja Bem Vindo!!");
+            Materialize.showStaggeredList('#text')
         </script>
     </body>
   </html>
