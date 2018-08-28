@@ -1,4 +1,4 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -15,18 +15,18 @@
     <body class="grey lighten-3">
         <nav class="green lighten-1">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo center">Comicsnews</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="index.php" class="brand-logo center">Comicsnews</a>
+                <a href="index.php" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#modal1"><i class="material-icons left">mode_edit</i>Criar Notícia</a></li>
+                    <li><a href="cadastrar.php"><i class="material-icons left">mode_edit</i>Criar Notícia</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#modal1"><i class="material-icons left">mode_edit</i>Criar Notícia</a></li>
+                    <li><a href="cadastrar.php"><i class="material-icons left">mode_edit</i>Criar Notícia</a></li>
                 </ul>
             </div>
         </nav>
         <div class="container">
-            <?php include 'cadastrar.php'; 
+            <?php 
                 $conexao = new Conexao();
             
                 $list = $conexao->selectNoticia();
@@ -59,6 +59,10 @@
                         </div>
                       </div>
                     </div>';
+                }
+
+                if($list == 0 ){
+                    $mensagem.='<h3> Sem notícias </h3>';
                 }
                 $mensagem.='</div>
                 </div>';

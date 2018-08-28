@@ -1,5 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="img/news mov.gif">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"/>
+        <link type="text/css" rel="stylesheet" href="css/personalizado.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<div class="card-panel modal" id="modal1">
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <!-- <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> -->
+        <script type="text/javascript" src="js/nicEdit-latest.js"></script>
+        <script type="text/javascript" src="js/materialize.js"></script>        
+        <script type="text/javascript" src="js/controle.js"></script>
+    </head>
+    <body>
+    <nav class="green lighten-1">
+            <div class="nav-wrapper">
+                <a href="index.php" class="brand-logo center">Comicsnews</a>
+                <a href="index.php" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.php"><i class="material-icons left">keyboard_backspace</i>Voltar</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="index.php"><i class="material-icons left">keyboard_backspace</i>Voltar</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
     <form class="modal-content" action="" method="post" enctype="multipart/form-data">
         <div class="input-field col s12">
             <h4 class="left-align"> Nova notícia</h4>
@@ -18,9 +47,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s10 offset-s1">
-                <textarea  name="descricao" id="descricao" class="materialize-textarea" required></textarea>
-                <label for="descricao">Descrição</label>
+            <div class="col s12 offset-s1">
+                <h5>Descrição</h5>    
+            </div>
+            <div class="input-field col s12 offset-s1">
+                <textarea   name="descricao" id="descricao" class="materialize-textarea" required style="width: 83%; height:200px;"></textarea>
             </div>
         </div>
         <div class="row">
@@ -40,7 +71,7 @@
             <div class="col s12 m12 ">
                 <div class="col s12 ">
                     <button class="btn  waves-effect modal-close waves-light red darken-1" type="reset">
-                        <i class="material-icons right">delete</i> Cancelar
+                        <i class="material-icons right">delete</i> Limpar
                     </button>                                                     
                     <button class="btn  waves-effect waves-light  green darken-1" type="submit" name="metodo" value="cadastraNoticia">
                         <i class="material-icons right">send</i> Salvar
@@ -49,7 +80,7 @@
             </div>
         </div>                 
     </form>
-</div>
+    </div>
 <?php
     require_once ("php/noticias.php");
     require_once ("php/conexao.php");
@@ -63,7 +94,7 @@
     $arqTemp = @$_FILES['arquivo']['tmp_name'];
     $arqError = @$_FILES['arquivo']['error'];
 
-    if((!empty($metodo))&& ($metodo == 'cadastraNoticia')){
+    if((!empty($metodo)) && ($metodo == 'cadastraNoticia')){
         
         if($arqError == 0){
             $pasta = 'img/';
@@ -74,4 +105,12 @@
         }
     }
 ?>
-    
+<script type="text/javascript">
+//<![CDATA[
+  bkLib.onDomLoaded(function() {
+        new nicEditor({maxHeight : 200}).panelInstance('descricao');
+  });
+  //]]>
+  </script>
+</body>
+</html>
