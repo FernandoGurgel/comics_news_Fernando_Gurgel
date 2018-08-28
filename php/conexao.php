@@ -32,8 +32,10 @@ class Conexao {
         
         if($this->conecao->exec($this->query)>0){
             echo '<script> exibiMensagem("Notícia salva com sucesso!"); </script>';
+            header("Location: ../index.php");
         }else{
             echo '<script> exibiMensagem("Error ao salvar!"); </script>';
+            header("Location: ../index.php");
         }
     }
     

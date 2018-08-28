@@ -1,7 +1,4 @@
-<?php 
-    require_once ("php/noticias.php");
-    require_once ("php/conexao.php");
-?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -32,7 +29,9 @@
         <div class="container">
             <?php 
                 $conexao = new Conexao();
+                
 
+                echo("teste");
                 $list = $conexao->selectNoticia();
                 
                 $mensagem = '<div class="row section">

@@ -29,13 +29,13 @@
     <body class="grey lighten-3">
         <nav class="green lighten-1">
             <div class="nav-wrapper">
-                <a href="/estagio%20web/" class="brand-logo center">Comicsnews</a>
+                <a href="index.php" class="brand-logo center">Comicsnews</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="/estagio%20web/"><i class="material-icons left">store</i>Home</a></li>
+                    <li><a href="index.php"><i class="material-icons left">store</i>Home</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="/estagio%20web/"><i class="material-icons left">store</i>Home</a></li>
+                    <li><a href="index.php"><i class="material-icons left">store</i>Home</a></li>
                 </ul>
             </div>
         </nav>

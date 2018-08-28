@@ -95,7 +95,7 @@
     $arqError = @$_FILES['arquivo']['error'];
 
     if((!empty($metodo)) && ($metodo == 'cadastraNoticia')){
-        
+        echo('enviando');
         if($arqError == 0){
             $pasta = 'img/';
             $upload = move_uploaded_file($arqTemp, $pasta . $arqName);
